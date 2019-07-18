@@ -39,17 +39,14 @@ function Pomodoro(Props) {
                     }, React.createElement(ClockPanel$ReactHooksTemplate.make, { })), React.createElement("div", {
                       className: "pomodoro__info"
                     }, React.createElement(InfoPanel$ReactHooksTemplate.make, { }))), React.createElement("div", {
-                  className: Utils$ReactHooksTemplate.c(/* :: */[
+                  className: Utils$ReactHooksTemplate.c(/* array */[
                         /* tuple */[
                           "pomodoro__toggle",
                           true
                         ],
-                        /* :: */[
-                          /* tuple */[
-                            "pomodoro__toggle--active",
-                            match[0][/* showInfo */1]
-                          ],
-                          /* [] */0
+                        /* tuple */[
+                          "pomodoro__toggle--active",
+                          match[0][/* showInfo */1]
                         ]
                       ])
                 }, React.createElement(ToggleInfo$ReactHooksTemplate.make, {

@@ -33,10 +33,10 @@ let make = () => {
       <div className="pomodoro__info"> <InfoPanel /> </div>
     </div>
     <div
-      className={c([
+      className={c([|
         ("pomodoro__toggle", true),
         ("pomodoro__toggle--active", state.showInfo),
-      ])}>
+      |])}>
       <ToggleInfo toggleInfo={() => dispatch(ToggleInfo)} />
     </div>
   </div>;
