@@ -3,13 +3,14 @@
 
 var React = require("react");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
+var Pomodoro$ReactHooksTemplate = require("./components/Pomodoro.bs.js");
 
 ((require('./styles/app.scss')));
 
 function Index$App(Props) {
   return React.createElement("div", {
               className: "app"
-            });
+            }, React.createElement(Pomodoro$ReactHooksTemplate.make, { }));
 }
 
 var App = /* module */[/* make */Index$App];
