@@ -10,7 +10,7 @@ function c(cls) {
   return cls.reduce((function (result, p) {
                   var match = p[1] === true;
                   if (match) {
-                    return /* array */[p[0]].concat(result);
+                    return result.concat(/* array */[p[0]]);
                   } else {
                     return result;
                   }
