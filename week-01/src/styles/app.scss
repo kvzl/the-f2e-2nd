@@ -3,6 +3,8 @@
 @import 'variables';
 @import 'functions';
 
+@import 'reset';
+
 body {
   @each $key, $value in $colors {
     --#{$key}: #{$value};
@@ -10,5 +12,5 @@ body {
 
   font-family: 'Lato', sans-serif;
   color: var(--dark);
-  background-color: var(--gray);
+  background-color: var(--gray-1);
 }
