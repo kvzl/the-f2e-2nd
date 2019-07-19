@@ -1,0 +1,27 @@
+.info-panel {
+  $c: &;
+
+  --nav-width: 80px;
+
+  display: flex;
+  flex-flow: row;
+  background-color: var(--dark);
+  height: 100%;
+
+  &__navigation {
+    width: var(--nav-width);
+    border-right: 1px solid var(--gray-3);
+  }
+
+  &__content {
+    transition: all .3s ease;
+    flex-grow: 1;
+    width: 0;
+  };
+
+  &--active {
+    #{$c}__content {
+      width: calc(50vw - var(--nav-width));
+    }
+  }
+}

@@ -2,13 +2,31 @@
 'use strict';
 
 var React = require("react");
+var Utils$ReactHooksTemplate = require("../Utils.bs.js");
+var ToggleInfo$ReactHooksTemplate = require("./ToggleInfo.bs.js");
 
 function InfoPanel(Props) {
+  var show = Props.show;
+  var toggleInfo = Props.toggleInfo;
+  var toggleClass = Utils$ReactHooksTemplate.c(/* array */[
+        /* tuple */[
+          "info-panel",
+          true
+        ],
+        /* tuple */[
+          "info-panel--active",
+          show
+        ]
+      ]);
   return React.createElement("div", {
-              className: "info-panel"
+              className: toggleClass
             }, React.createElement("div", {
                   className: "info-panel__navigation"
-                }), React.createElement("div", {
+                }, React.createElement("div", {
+                      className: "info-panel__toggle"
+                    }, React.createElement(ToggleInfo$ReactHooksTemplate.make, {
+                          toggleInfo: toggleInfo
+                        }))), React.createElement("div", {
                   className: "info-panel__content"
                 }));
 }

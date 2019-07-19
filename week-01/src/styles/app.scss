@@ -4,6 +4,7 @@
 @import 'functions';
 
 @import 'reset';
+@import 'components';
 
 body {
   @each $key, $value in $colors {

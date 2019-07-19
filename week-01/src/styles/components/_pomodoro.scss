@@ -1,0 +1,14 @@
+.pomodoro {
+  display: flex;
+  flex-flow: row;
+  height: 100vh;
+  width: 100vw;
+
+  &__clock {
+    flex-grow: 1;
+  }
+
+  &__info {
+    flex-shrink: 1;
+  }
+}

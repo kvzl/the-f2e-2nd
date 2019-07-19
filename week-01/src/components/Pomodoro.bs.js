@@ -3,10 +3,8 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var Utils$ReactHooksTemplate = require("../Utils.bs.js");
 var InfoPanel$ReactHooksTemplate = require("./InfoPanel.bs.js");
 var ClockPanel$ReactHooksTemplate = require("./ClockPanel.bs.js");
-var ToggleInfo$ReactHooksTemplate = require("./ToggleInfo.bs.js");
 
 function reducer(state, action) {
   if (action) {
@@ -33,23 +31,11 @@ function Pomodoro(Props) {
   return React.createElement("div", {
               className: "pomodoro"
             }, React.createElement("div", {
-                  className: "pomodoro__main"
-                }, React.createElement("div", {
-                      className: "pomodoro__clock"
-                    }, React.createElement(ClockPanel$ReactHooksTemplate.make, { })), React.createElement("div", {
-                      className: "pomodoro__info"
-                    }, React.createElement(InfoPanel$ReactHooksTemplate.make, { }))), React.createElement("div", {
-                  className: Utils$ReactHooksTemplate.c(/* array */[
-                        /* tuple */[
-                          "pomodoro__toggle",
-                          true
-                        ],
-                        /* tuple */[
-                          "pomodoro__toggle--active",
-                          match[0][/* showInfo */1]
-                        ]
-                      ])
-                }, React.createElement(ToggleInfo$ReactHooksTemplate.make, {
+                  className: "pomodoro__clock"
+                }, React.createElement(ClockPanel$ReactHooksTemplate.make, { })), React.createElement("div", {
+                  className: "pomodoro__info"
+                }, React.createElement(InfoPanel$ReactHooksTemplate.make, {
+                      show: match[0][/* showInfo */1],
                       toggleInfo: (function (param) {
                           return Curry._1(dispatch, /* ToggleInfo */0);
                         })
