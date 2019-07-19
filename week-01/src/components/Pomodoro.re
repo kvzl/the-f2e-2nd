@@ -29,7 +29,7 @@ let make = () => {
     <div className="pomodoro__clock"> <ClockPanel /> </div>
     <div className="pomodoro__info">
       <InfoPanel
-        show={state.showInfo}
+        active={state.showInfo}
         toggleInfo={() => dispatch(ToggleInfo)}
       />
     </div>

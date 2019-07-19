@@ -15,3 +15,7 @@ body {
   color: var(--dark);
   background-color: var(--gray-1);
 }
+
+.flip-h {
+  transform: rotate(180deg);
+}

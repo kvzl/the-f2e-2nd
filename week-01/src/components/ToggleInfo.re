@@ -1,12 +1,14 @@
-[@react.component]
-let make = (~toggleInfo) => {
-  let onClick = (evt_) => {
-    toggleInfo();
-  };
+open Utils;
 
-  <div className="toggle-info">
-    <button onClick={onClick}>
-      {React.string("Toggle")}
-    </button>
-  </div>
+[@react.component]
+let make = (~active, ~toggleInfo) => {
+  let arrowClass = c([|
+    ("toggle-info__arrow", true),
+    ("flip-h", active),
+  |]);
+
+  <button className="toggle-info" onClick={(evt_) => toggleInfo()}>
+    <img className="toggle-info__tomato" src=Icon.tomato />
+    <img className=arrowClass src=Icon.arrow />
+  </button>;
 };
