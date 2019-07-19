@@ -1,19 +1,24 @@
-$pomo: #EA5548;
-$leaf: #316901;
+$pomo : #EA5548;
 $break: #B5E254;
 
-$colors: (
-  'primary': $pomo,
-  'secondary': '#606060',
-  'info': $break,
-  'gray-1': '#EAEAEA',
-  'gray-2': '#ACACAC',
-  'gray-3': '#414141',
-  'dark': '#333333',
-  'light': '#FCFCFC',
-  'highlight': '#316901',
+$primary  : $pomo;
+$secondary: #606060;
+$info     : $break;
+$gray-1   : #EAEAEA;
+$gray-2   : #ACACAC;
+$gray-3   : #414141;
+$dark     : #333333;
+$light    : #FCFCFC;
 
-  'pomo': $pomo,
-  'leaf': $leaf,
-  'break': $break,
+$colors: (
+  'primary'  : $pomo,
+  'secondary': $secondary,
+  'info'     : $info,
+  'gray-1'   : $gray-1,
+  'gray-2'   : $gray-2,
+  'gray-3'   : $gray-3,
+  'dark'     : $dark,
+  'light'    : $light,
+  'pomo'     : $pomo,
+  'break'    : $break,
 );
