@@ -129,7 +129,7 @@ eval("\n\nvar Caml_array = __webpack_require__(/*! ./caml_array.js */ \"../../..
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);\", \"\"]);\n// Module\nexports.push([module.i, \"body {\\n  font-family: 'Lato', sans-serif; }\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/app.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);\", \"\"]);\n// Module\nexports.push([module.i, \"body {\\n  --primary: #EA5548;\\n  --secondary: #606060;\\n  --info: #B5E254;\\n  --gray-1: #EAEAEA;\\n  --gray-2: #ACACAC;\\n  --gray-3: #414141;\\n  --dark: #333333;\\n  --light: #FCFCFC;\\n  --highlight: #316901;\\n  --pomo: #EA5548;\\n  --leaf: #316901;\\n  --break: #B5E254;\\n  font-family: 'Lato', sans-serif;\\n  color: var(--dark);\\n  background-color: var(--gray); }\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/app.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
