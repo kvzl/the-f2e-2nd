@@ -9,7 +9,8 @@ let make = (~active, ~toggleInfo) => {
 
   <div className=toggleClass>
     <div className="info-panel__navigation">
-      <div className="info-panel__toggle"> <ToggleInfo active toggleInfo /> </div>
+      <InfoNavigation />
+      <InfoToggleButton active toggleInfo />
     </div>
     <div className="info-panel__content" />
   </div>;
