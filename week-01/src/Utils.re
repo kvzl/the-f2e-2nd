@@ -1,12 +1,10 @@
-let concat = Js.Array.concat;
+let concatElm = elm => Js.Array.concat([|elm|]);
 
 let c = cls =>
   cls
   |> Js.Array.reduce(
-       (result, p) => {
-         let (prop, value) = p;
-         value == true ? concat([|prop|], result) : result;
-       },
+       (result, (prop, value)) =>
+         value == true ? concatElm(prop, result) : result,
        [||],
      )
   |> Js.Array.joinWith(" ");
