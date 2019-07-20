@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap");
-@import "variables";
-@import "mixins";
-@import "functions";
-@import "reset";
+@import "base/variables";
+@import "base/mixins";
+@import "base/functions";
+@import "base/reset";
 @import "components";
 
 body {
