@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-@import 'variables';
-@import 'functions';
-
-@import 'reset';
-@import 'components';
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900&display=swap");
+@import "variables";
+@import "functions";
+@import "reset";
+@import "components";
 
 body {
   @each $key, $value in $colors {
     --#{$key}: #{$value};
   }
 
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: var(--dark);
   background-color: var(--gray-1);
 }

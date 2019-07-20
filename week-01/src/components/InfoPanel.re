@@ -6,7 +6,7 @@ type state = {
   showInfo: bool,
 };
 
-let state = {currentInfo: NewTask, showInfo: false};
+let state = {currentInfo: NewTask, showInfo: true};
 
 type action =
   | ToggleInfo
@@ -32,6 +32,14 @@ let make = () => {
     SetShowInfo(true) |> dispatch;
   };
 
+  let (title, content) =
+    switch (state.currentInfo) {
+    | NewTask => ("Add new task", <NewTaskPage />)
+    | TaskList => ("Task list", <TaskListPage />)
+    | Report => ("Analytics Report", <ReportPage />)
+    | RingTone => ("Ring Tone", <RingTonePage />)
+    };
+
   <div className=toggleClass>
     <div className="info-panel__navigation">
       <InfoNav currentInfo={state.currentInfo} switchInfo />
@@ -41,12 +49,7 @@ let make = () => {
       />
     </div>
     <div className="info-panel__content">
-      {switch (state.currentInfo) {
-       | NewTask => <NewTaskPage />
-       | TaskList => <TaskListPage />
-       | Report => <ReportPage />
-       | RingTone => <RingTonePage />
-       }}
+      <InfoPage title> content </InfoPage>
     </div>
   </div>;
 };

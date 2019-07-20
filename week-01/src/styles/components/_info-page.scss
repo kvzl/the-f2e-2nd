@@ -1,0 +1,16 @@
+.info-page {
+  padding: 30px 35px;
+
+  &__title {
+    border-bottom: 1px solid var(--gray-3);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}
