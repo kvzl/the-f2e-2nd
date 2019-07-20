@@ -10,3 +10,6 @@ let c = cls =>
        [||],
      )
   |> join(" ");
+
+let rec range = (start, end_) =>
+  start >= end_ ? [] : [start, ...range(start + 1, end_)];

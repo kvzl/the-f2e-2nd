@@ -1,0 +1,15 @@
+.tomatos {
+  padding: 5px 0;
+
+  &__tomato {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}
