@@ -4,6 +4,7 @@
 @import "base/functions";
 @import "base/reset";
 @import "components";
+@import "pages";
 
 body {
   @each $key, $value in $colors {
