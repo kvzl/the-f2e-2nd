@@ -1,6 +1,7 @@
 .info-panel {
   $c: &;
   --nav-width: 80px;
+  --content-width: calc(50vw - var(--nav-width));
 
   display: flex;
   flex-flow: row;
@@ -13,17 +14,21 @@
   }
 
   &__content {
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     flex-grow: 1;
     width: 0;
     border-left: 0 solid var(--gray-3);
     color: var(--light);
     overflow: hidden;
+
+    & > * {
+      width: var(--content-width);
+    }
   }
 
   &--active {
     #{$c}__content {
-      width: calc(50vw - var(--nav-width));
+      width: var(--content-width);
       border-left-width: 1px;
     }
   }

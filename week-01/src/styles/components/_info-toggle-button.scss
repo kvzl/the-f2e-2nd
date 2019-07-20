@@ -9,13 +9,18 @@
   border-radius: 25px 5px 5px 25px;
   background-color: var(--light);
   cursor: pointer;
+  transition: transform 0.2s ease;
 
   position: absolute;
   bottom: 30px;
   right: 17px;
 
+  &:hover {
+    transform: translateX(-5px);
+  }
+
   &__arrow {
-    transition: transform .35s ease-in;
+    transition: transform 0.35s ease-in;
     width: 20px;
   }
 
