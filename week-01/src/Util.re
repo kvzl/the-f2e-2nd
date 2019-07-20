@@ -1,5 +1,7 @@
 let concatElm = elm => Js.Array.concat([|elm|]);
 
+let join = Js.Array.joinWith;
+
 let c = cls =>
   cls
   |> Js.Array.reduce(
@@ -7,4 +9,4 @@ let c = cls =>
          value == true ? concatElm(prop, result) : result,
        [||],
      )
-  |> Js.Array.joinWith(" ");
+  |> join(" ");

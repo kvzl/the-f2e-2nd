@@ -1,8 +1,4 @@
-type info =
-  | NewTask
-  | TaskList
-  | Report
-  | RingTone;
+open Type;
 
 type state = {
   currentInfo: info,
@@ -30,7 +26,9 @@ let make = () => {
     <div className="pomodoro__info">
       <InfoPanel
         active={state.showInfo}
+        currentInfo={state.currentInfo}
         toggleInfo={() => dispatch(ToggleInfo)}
+        switchInfo={info => SwitchInfo(info) |> dispatch }
       />
     </div>
   </div>;

@@ -1,7 +1,7 @@
-open Utils;
+open Util;
 
 [@react.component]
-let make = (~active, ~toggleInfo) => {
+let make = (~active, ~currentInfo, ~toggleInfo, ~switchInfo) => {
   let toggleClass = c([|
     ("info-panel", true),
     ("info-panel--active", active)
@@ -9,7 +9,7 @@ let make = (~active, ~toggleInfo) => {
 
   <div className=toggleClass>
     <div className="info-panel__navigation">
-      <InfoNavigation />
+      <InfoNav currentInfo switchInfo/>
       <InfoToggleButton active toggleInfo />
     </div>
     <div className="info-panel__content" />

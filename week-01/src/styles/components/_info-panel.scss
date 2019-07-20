@@ -9,7 +9,6 @@
 
   &__navigation {
     width: var(--nav-width);
-    border-right: 1px solid var(--gray-3);
     position: relative;
   }
 
@@ -17,11 +16,13 @@
     transition: all .3s ease-in-out;
     flex-grow: 1;
     width: 0;
+    border-left: 0 solid var(--gray-3);
   };
 
   &--active {
     #{$c}__content {
       width: calc(50vw - var(--nav-width));
+      border-left-width: 1px;
     }
   }
 }

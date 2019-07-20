@@ -1,4 +1,4 @@
-open Utils;
+open Util;
 
 [@react.component]
 let make = (~active, ~toggleInfo) => {
