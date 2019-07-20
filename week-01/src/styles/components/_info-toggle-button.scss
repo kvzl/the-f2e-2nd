@@ -15,6 +15,7 @@
   right: 17px;
 
   &__arrow {
+    transition: transform .35s ease-in;
     width: 20px;
   }
 

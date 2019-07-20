@@ -4,7 +4,7 @@ open Util;
 let make = (~active, ~toggleInfo) => {
   let arrowClass = c([|
     ("info-toggle-button__arrow", true),
-    ("flip-h", active),
+    ("flip-h", !active),
   |]);
 
   <button className="info-toggle-button" onClick={(evt_) => toggleInfo()}>
