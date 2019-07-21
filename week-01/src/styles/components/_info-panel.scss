@@ -1,7 +1,7 @@
 .info-panel {
   $c: &;
   --nav-width: 80px;
-  --content-width: calc(50vw - var(--nav-width));
+  --content-width: 520px;
 
   display: flex;
   flex-flow: row;
