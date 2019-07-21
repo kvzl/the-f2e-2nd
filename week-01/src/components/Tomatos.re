@@ -2,7 +2,9 @@ open Util;
 open Icon;
 
 [@react.component]
-let make = (~value, ~max, ~onChange) => {
+let make = (~sm=false, ~value, ~max, ~onChange) => {
+  let sc = sc(sm);
+
   let tomatos =
     range(0, max)
     |> List.map(n => {
@@ -21,8 +23,7 @@ let make = (~value, ~max, ~onChange) => {
            onClick={e => onChange(n + 1)}
          />;
        })
-    |> Array.of_list
-    |> React.array;
+    |> react_of_list;
 
-  <div className="tomatos"> tomatos </div>;
+  <div className={sc("tomatos")}> tomatos </div>;
 };

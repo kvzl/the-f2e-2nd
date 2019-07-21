@@ -6,7 +6,7 @@ type state = {
   showInfo: bool,
 };
 
-let state = {currentInfo: NewTask, showInfo: true};
+let state = {currentInfo: TaskList, showInfo: true};
 
 type action =
   | ToggleInfo

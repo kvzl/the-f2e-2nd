@@ -1,0 +1,108 @@
+.task-list {
+}
+
+.task {
+  $c: &;
+  margin-bottom: 1px;
+  border-radius: 2px;
+  background-color: var(--gray-3);
+  overflow: hidden;
+  cursor: pointer;
+
+  &--active {
+    #{$c}__tomato {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--editing {
+    #{$c}__content {
+      height: 220px;
+      padding: 12px 0;
+      border-top: 1px solid var(--dark);
+    }
+  }
+
+  &__title-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tomato {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+
+    img {
+      height: 13px;
+      width: 13px;
+      opacity: 0;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+  }
+
+  &__summary {
+    flex-grow: 1;
+    padding: 12px 0 10px;
+  }
+
+  &__edit {
+    flex-shrink: 1;
+
+    .icon-dots {
+      padding: 10px;
+
+      &__wrap {
+        --icon-size: 20px;
+
+        position: relative;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        color: var(--gray-1);
+      }
+    }
+  }
+
+  &__content {
+    height: 0px;
+    transition: all 0.3s ease;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
+  &__actions {
+    display: flex;
+    flex-flow: row;
+  }
+
+  &__archive {
+    margin-right: 20px;
+  }
+
+  &__save {
+    flex-grow: 1;
+  }
+}
+
+.task-progress {
+  &__dot {
+    display: inline-block;
+
+    height: 8px;
+    width: 8px;
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+    margin-right: 6px;
+
+    &--finished {
+      background-color: var(--primary);
+    }
+  }
+}

@@ -1,15 +1,23 @@
 .tomatos {
+  $c: &;
   padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+
+  &--sm {
+    #{$c}__tomato {
+      height: 20px;
+      width: 20px;
+    }
+  }
 
   &__tomato {
     cursor: pointer;
-
-    &:not(:last-child) {
-      margin-right: 22px;
-    }
+    transition: transform 0.2s ease-in-out;
 
     &:hover {
       filter: brightness(1.1);
+      transform: scale(1.2);
     }
   }
 }

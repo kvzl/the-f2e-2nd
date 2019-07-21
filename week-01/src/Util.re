@@ -11,5 +11,10 @@ let c = cls =>
      )
   |> join(" ");
 
+let sc = (sm, className) =>
+  className ++ (sm ? " " ++ className ++ "--sm" : "");
+
 let rec range = (start, end_) =>
   start >= end_ ? [] : [start, ...range(start + 1, end_)];
+
+let react_of_list = list => list |> Array.of_list |> React.array;
