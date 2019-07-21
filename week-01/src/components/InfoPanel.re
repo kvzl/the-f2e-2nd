@@ -6,7 +6,7 @@ type state = {
   showInfo: bool,
 };
 
-let state = {currentInfo: TaskList, showInfo: true};
+let state = {currentInfo: TaskList, showInfo: false};
 
 type action =
   | ToggleInfo
@@ -20,7 +20,6 @@ let reducer = (state, action) =>
   | SwitchInfo(info) => {...state, currentInfo: info}
   };
 
-
 module InfoToggleButton = {
   [@react.component]
   let make = (~active, ~toggleInfo) => {
@@ -33,7 +32,6 @@ module InfoToggleButton = {
     </button>;
   };
 };
-
 
 [@react.component]
 let make = () => {

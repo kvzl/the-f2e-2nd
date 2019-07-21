@@ -1,0 +1,26 @@
+.task-progress {
+  $c: &;
+  --dot-size: 12px;
+
+  &--sm {
+    --dot-size: 8px;
+
+    &__dot {
+      border-width: 1px;
+      margin-right: 6px;
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    height: var(--dot-size);
+    width: var(--dot-size);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &--finished {
+      background-color: var(--primary);
+    }
+  }
+}

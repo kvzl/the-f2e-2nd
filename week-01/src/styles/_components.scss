@@ -1,8 +1,16 @@
+// Layouts
 @import "components/pomodoro";
+
+// Panels
 @import "components/info-panel";
-@import "components/info-nav";
+@import "components/timer-panel";
+
+// Pages
 @import "components/info-page";
+
 @import "components/form";
+@import "components/info-nav";
 @import "components/tomatos";
 @import "components/tabs";
 @import "components/task-list";
+@import "components/task-progress";

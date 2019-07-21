@@ -1,26 +1,6 @@
 open Util;
 open Type;
 
-module TaskProgress = {
-  [@react.component]
-  let make = (~estimated: int, ~finished: int) => {
-    let dots =
-      List.map(n => {
-        let className =
-          c([|
-            ("task-progress__dot", true),
-            ("task-progress__dot--finished", n < finished),
-          |]);
-
-        <div key={string_of_int(n)} className />;
-      });
-
-    <div className="task-progress">
-      {range(0, estimated) |> dots |> react_of_list}
-    </div>;
-  };
-};
-
 module Task = {
   [@react.component]
   let make =
@@ -40,7 +20,11 @@ module Task = {
         <div className="task__tomato"> <img src=Icon.tomato /> </div>
         <div className="task__summary">
           <span className="task__title"> {React.string(task.title)} </span>
-          <TaskProgress estimated={task.estimated} finished={task.finished} />
+          <TaskProgress
+            sm=true
+            estimated={task.estimated}
+            finished={task.finished}
+          />
         </div>
         <div className="task__edit"> <Icon.Dots vertical=editing /> </div>
       </div>
@@ -68,18 +52,17 @@ let make =
       ~onTaskClick: int => unit,
     ) => {
   let taskElms =
-    tasks
-    ->Belt.Array.mapWithIndex((index, task) => {
-        let active =
-          switch (activeTask) {
-          | Some(n) => n == index
-          | None => false
-          };
-        let editing = active && editing;
-        let onClick = () => onTaskClick(index);
+    tasks->Belt.Array.mapWithIndex((index, task) => {
+      let active =
+        switch (activeTask) {
+        | Some(n) => n == index
+        | None => false
+        };
+      let editing = active && editing;
+      let onClick = () => onTaskClick(index);
 
-        <Task key={string_of_int(index)} task active editing onClick />;
-      });
+      <Task key={string_of_int(index)} task active editing onClick />;
+    });
 
   <div className="task-list"> {taskElms |> React.array} </div>;
 };

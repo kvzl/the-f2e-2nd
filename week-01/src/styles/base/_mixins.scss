@@ -4,3 +4,9 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

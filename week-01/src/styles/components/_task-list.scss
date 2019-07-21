@@ -90,19 +90,3 @@
     flex-grow: 1;
   }
 }
-
-.task-progress {
-  &__dot {
-    display: inline-block;
-
-    height: 8px;
-    width: 8px;
-    border: 1px solid var(--primary);
-    border-radius: 3px;
-    margin-right: 6px;
-
-    &--finished {
-      background-color: var(--primary);
-    }
-  }
-}

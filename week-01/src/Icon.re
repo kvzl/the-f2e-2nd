@@ -16,6 +16,16 @@ let start = [%raw {|require('./assets/icons/start_red.svg')|}];
 
 let startGray = [%raw {|require('./assets/icons/start_gray.svg')|}];
 
+let pause = [%raw {|require('./assets/icons/pause_red.svg')|}];
+
+let pauseGray = [%raw {|require('./assets/icons/pause_gray.svg')|}];
+
+let reset = [%raw {|require('./assets/icons/reset_red.svg')|}];
+
+let resetGray = [%raw {|require('./assets/icons/reset_gray.svg')|}];
+
+let complete = [%raw {|require('./assets/icons/complete.svg')|}];
+
 module Dots = {
   [@react.component]
   let make = (~vertical) =>

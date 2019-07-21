@@ -1,0 +1,111 @@
+.timer-panel {
+  @include flex-center();
+
+  flex-flow: column;
+  height: 100%;
+  overflow: auto;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  &__progress {
+    padding-top: 10px;
+  }
+
+  &__timer {
+    padding: 50px 0;
+  }
+
+  &__control {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  &__complete {
+    padding-bottom: 66px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  &__mark {
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.timer {
+  @include flex-center();
+
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 50px solid var(--primary);
+  background-color: var(--light);
+
+  &__countdown {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+}
+
+.control {
+  $c: &;
+  @include flex-center();
+
+  border-radius: 50%;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: var(--light);
+  box-shadow: 0px 10px 30px -20px rgba($dark, 0.4);
+  position: relative;
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    background-color: rgba($light, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+  }
+
+  @each $type in ("start", "pause", "reset") {
+    &--#{$type} {
+      &::before {
+        content: "#{$type}";
+      }
+    }
+  }
+}
