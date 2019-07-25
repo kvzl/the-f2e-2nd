@@ -20,6 +20,6 @@
   },
   "staticPath": {
     "source": "/assets",
-    "target": "/dist"
+    "target": "/dist/assets"
   }
 }

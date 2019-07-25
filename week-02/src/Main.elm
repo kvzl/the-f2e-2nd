@@ -4,7 +4,7 @@ import Html exposing (Html, div, text, img)
 import Html.Attributes exposing (class, src)
 
 assetsPath : String
-assetsPath = "/assets/"
+assetsPath = "assets/"
 
 getPokerUrl : String -> String
 getPokerUrl name =
