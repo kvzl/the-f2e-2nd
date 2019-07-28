@@ -6,9 +6,9 @@ var t=null;function e(){return t||(t=n()),t}function n(){try{throw new Error}cat
 var r=require("./bundle-url").getBundleURL;function e(r){Array.isArray(r)||(r=[r]);var e=r[r.length-1];try{return Promise.resolve(require(e))}catch(n){if("MODULE_NOT_FOUND"===n.code)return new s(function(n,i){t(r.slice(0,-1)).then(function(){return require(e)}).then(n,i)});throw n}}function t(r){return Promise.all(r.map(u))}var n={};function i(r,e){n[r]=e}module.exports=exports=e,exports.load=t,exports.register=i;var o={};function u(e){var t;if(Array.isArray(e)&&(t=e[1],e=e[0]),o[e])return o[e];var i=(e.substring(e.lastIndexOf(".")+1,e.length)||e).toLowerCase(),u=n[i];return u?o[e]=u(r()+e).then(function(r){return r&&module.bundle.register(t,r),r}).catch(function(r){throw delete o[e],r}):void 0}function s(r){this.executor=r,this.promise=null}s.prototype.then=function(r,e){return null===this.promise&&(this.promise=new Promise(this.executor)),this.promise.then(r,e)},s.prototype.catch=function(r){return null===this.promise&&(this.promise=new Promise(this.executor)),this.promise.catch(r)};
 },{"./bundle-url":"YajF"}],"Focm":[function(require,module,exports) {
 require("./styles/app.scss"),module.hot&&module.hot.dispose(function(){window.location.reload()}),require("_bundle_loader")(require.resolve("./src/Main.elm")).then(function(e){var o=e.Elm,r=document.querySelector("main");if(!r)throw new Error("Failed to mount app");o.Main.init({node:r})});
-},{"./styles/app.scss":"OXm4","_bundle_loader":"DmPq","./src/Main.elm":[["Main.641cfbf7.js","3oS9"],"3oS9"]}],"ANe6":[function(require,module,exports) {
+},{"./styles/app.scss":"OXm4","_bundle_loader":"DmPq","./src/Main.elm":[["Main.a8c40a49.js","3oS9"],"3oS9"]}],"ANe6":[function(require,module,exports) {
 module.exports=function(n){return new Promise(function(e,o){var r=document.createElement("script");r.async=!0,r.type="text/javascript",r.charset="utf-8",r.src=n,r.onerror=function(n){r.onerror=r.onload=null,o(n)},r.onload=function(){r.onerror=r.onload=null,e()},document.getElementsByTagName("head")[0].appendChild(r)})};
 },{}],0:[function(require,module,exports) {
 var b=require("DmPq");b.register("js",require("ANe6"));
 },{}]},{},[0,"Focm"], null)
-//# sourceMappingURL=week-02.8ffd63f7.js.map
+//# sourceMappingURL=week-02.15aad836.js.map
