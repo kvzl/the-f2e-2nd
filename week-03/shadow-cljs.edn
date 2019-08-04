@@ -1,0 +1,18 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[re-frame "0.10.8"]]
+
+ :nrepl {:port 8777}
+
+ :builds
+ {:app {:output-dir "public/js"
+        :asset-path "js"
+        :target :browser
+        :modules {:main {:entries [mp3p.core]}}
+
+        :devtools {:http-root "public"
+                   :http-port 8000
+                   :after-load mp3p.core/render}}}}

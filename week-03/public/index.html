@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mp3 Player</title>
+
+  <style>
+    body, html {
+      margin: 0;
+    }
+
+    @keyframes loading-indicator {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    .loading {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f1f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading .loading__indicator {
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      background-color: #7aa4a4;
+      animation: loading-indicator 1s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="loading">
+      <div class="loading__indicator"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    if (mp3p && mp3p.core && mp3p.core.init) {
+      mp3p.core.init()
+    }
+  </script>
+</body>
+</html>
