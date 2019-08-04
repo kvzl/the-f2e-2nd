@@ -2,6 +2,10 @@
   "name": "mp3p",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "serve": "shadow-cljs watch app",
+    "build": "shadow-cljs release app"
+  },
   "devDependencies": {
     "shadow-cljs": "2.8.42"
   },
