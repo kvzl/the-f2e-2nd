@@ -1,0 +1,40 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body, html {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  background-color: #2A2A2A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes loading-indicator {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .loading__indicator {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #9D68C1;
+  animation: loading-indicator 1s infinite;
+}

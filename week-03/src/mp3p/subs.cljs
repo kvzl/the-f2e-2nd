@@ -10,3 +10,8 @@
  ::test
  (fn [db]
    (:test db)))
+
+(rf/reg-sub
+ ::playlists
+ (fn [db]
+   (:playlists db)))

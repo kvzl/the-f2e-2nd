@@ -3,7 +3,8 @@
  ["src"]
 
  :dependencies
- [[re-frame "0.10.8"]]
+ [[re-frame "0.10.8"]
+  [clj-commons/cljss "1.6.4"]]
 
  :nrepl {:port 8777}
 

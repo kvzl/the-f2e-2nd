@@ -1,14 +1,15 @@
 (ns mp3p.views
-  (:require [re-frame.core :as rf]
+  (:require [reagent.core :as reagent]
+            [re-frame.core :as rf]
+            [cljss.core :refer-macros [defstyles]]
+            [sablono.core :refer [html]]
             [mp3p.subs :as subs]
-            [mp3p.events :as events]))
+            [mp3p.events :as events]
+            [mp3p.views.main-layout :refer [MainLayout]]
+            [mp3p.views.playlists :refer [Playlists]]))
+
 
 (defn main-panel []
-  (let [name (rf/subscribe [::subs/name])
-        test (rf/subscribe [::subs/test])]
-    [:div
-     [:p "Test value: " @test]
-     [:p "Name value: " @name]
-     [:button
-      {:on-click #(rf/dispatch [::events/name-change "Name changed!"])}
-      "Change name"]]))
+  (let [playlists (rf/subscribe [::subs/playlists])]
+    (MainLayout
+     (Playlists @playlists))))

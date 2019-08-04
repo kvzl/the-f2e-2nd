@@ -6,40 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mp3 Player</title>
 
-  <style>
-    body, html {
-      margin: 0;
-    }
-
-    @keyframes loading-indicator {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-
-      100% {
-        transform: scale(2);
-        opacity: 0;
-      }
-    }
-
-    .loading {
-      width: 100vw;
-      height: 100vh;
-      background-color: #2A2A2A;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .loading .loading__indicator {
-      border-radius: 50%;
-      height: 20px;
-      width: 20px;
-      background-color: #9D68C1;
-      animation: loading-indicator 1s infinite;
-    }
-  </style>
+  <link href="//fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="app">
