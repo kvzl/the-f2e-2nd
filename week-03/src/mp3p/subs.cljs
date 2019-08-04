@@ -1,12 +1,12 @@
 (ns mp3p.subs
-  (:require [re-frame.core :as re-frame]))
+  (:require [re-frame.core :as rf]))
 
-(re-frame/reg-sub
+(rf/reg-sub
  ::name
  (fn [db]
    (:name db)))
 
-(re-frame/reg-sub
+(rf/reg-sub
  ::test
  (fn [db]
    (:test db)))
