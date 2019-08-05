@@ -12,7 +12,7 @@
 
 
 (defstyles side []
-  {:width "214px"
+  {:width "230px"
    :height "100%"
    :background-color (:dark colors)
    :z-index 1

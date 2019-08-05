@@ -6,4 +6,5 @@
    :secondary "#2a2a2a"
    :highlight "#ffa883"
    :gray "#979797"
-   :light "#ffffff"})
+   :light "#ffffff"
+   :link "#6249e2"})

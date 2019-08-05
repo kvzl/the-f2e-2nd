@@ -15,8 +15,8 @@ return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.Persisten
 mp3p.core.init = (function mp3p$core$init(){
 console.log("Initializing");
 
-var G__28418_28419 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("mp3p.events","initialize-db","mp3p.events/initialize-db",-1814634267)], null);
-(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__28418_28419) : re_frame.core.dispatch_sync.call(null,G__28418_28419));
+var G__28311_28312 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("mp3p.events","initialize-db","mp3p.events/initialize-db",-1814634267)], null);
+(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__28311_28312) : re_frame.core.dispatch_sync.call(null,G__28311_28312));
 
 return mp3p.core.render();
 });
